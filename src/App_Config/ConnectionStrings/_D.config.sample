@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<connectionStrings condition-machineName="E([1-9])([0-9]{3})|EFOCUSDEV1">
+	<connectionString name="core" value="Data Source=.\sqlexpress;user instance=True;AttachDbFilename=|DataDirectory|\Sitecore.core.mdf;Integrated Security=True;" />
+	<connectionString name="master" value="Data Source=.\sqlexpress;user instance=True;AttachDbFilename=|DataDirectory|\sitecore.master.mdf;Integrated Security=True;" />
+	<connectionString name="web" value="Data Source=.\sqlexpress;user instance=True;AttachDbFilename=|DataDirectory|\sitecore.web.mdf;Integrated Security=True;" />
+</connectionStrings>

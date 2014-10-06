@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5067BEB-5C1B-42E4-93EF-69AF6D404F6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Efocus.Sitecore.ConditionalConfig</RootNamespace>
+    <AssemblyName>Efocus.Sitecore.ConditionalConfig</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
+    <MSBuildTargetsDir Condition=" '$(MSBuildTargetsDir)' == '' ">$(SolutionDir)\scripts\build\</MSBuildTargetsDir>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!--Custom-->
+  <Import Project="$(MSBuildTargetsDir)\Global.props" Condition="Exists('$(MSBuildTargetsDir)\Global.props')" />
+  <PropertyGroup>
+    <!--Variable to locate the folder holding the other eFocusModules-->
+    <eFocusModulesDir Condition="$(eFocusModulesDir) == '' Or $(eFocusModulesDir) == '*Undefined*'">..\..\</eFocusModulesDir>
+    <!--Variable to locate the folder holding the external dependencies-->
+    <ModulesLibraryDir Condition="$(ModulesLibraryDir) == '' Or $(ModulesLibraryDir) == '*Undefined*'">..\Libs\</ModulesLibraryDir>
+  </PropertyGroup>
+  <!--End custom-->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>$(ModulesLibraryDir)\Sitecore\Sitecore.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Config\Config\GlassCodeFirst.config.sample" />
+    <None Include="App_Config\ConnectionStrings\A.config.sample" />
+    <None Include="App_Config\ConnectionStrings\P-CMS.config.sample" />
+    <None Include="App_Config\ConnectionStrings\P-Frontend.config.sample" />
+    <None Include="App_Config\ConnectionStrings\_D.config.sample" />
+    <None Include="App_Config\MailSettings\A.config.sample" />
+    <None Include="App_Config\MailSettings\_O.config.sample" />
+    <None Include="App_Config\Variables\P-CMS.config.sample" />
+    <None Include="App_Config\Variables\P-Frontend.config.sample" />
+    <None Include="App_Config\Variables\_D.config.sample" />
+    <None Include="App_Config\WebDeploy\T-CMS.config.sample" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  <Message Importance="high" Text="$(ModulesLibraryDir)\Sitecore\Sitecore.Kernel.dll moet ie staan" />
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

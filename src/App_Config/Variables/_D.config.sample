@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" condition-machineName="E([1-9])([0-9]{3})|EFOCUSDEV1">
+  <sitecore>
+    <!-- HOSTNAMES -->
+    <sc.variable name="dtap-hostname-website-corporate" value="localhost"/>
+
+    <!-- DATABASE SETTINGS -->
+    <sc.variable name="dtap-EnableDebug" value="true" />
+    <sc.variable name="dtap-livemode-database" value="master"/>
+    <sc.variable name="dtap-codefirst" value="true"/>
+  </sitecore>
+</configuration>
