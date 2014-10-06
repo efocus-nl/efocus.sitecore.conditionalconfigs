@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$,Chris van de Steeg</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/efocus-nl/efocus.sitecore.conditionalconfigs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Sitecore,Configs,slowcheatah</tags>
+  </metadata>
+</package>

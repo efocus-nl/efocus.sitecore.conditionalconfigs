@@ -62,17 +62,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Config\GlassCodeFirst.config.sample" />
-    <None Include="App_Config\ConnectionStrings\A.config.sample" />
-    <None Include="App_Config\ConnectionStrings\P-CMS.config.sample" />
-    <None Include="App_Config\ConnectionStrings\P-Frontend.config.sample" />
-    <None Include="App_Config\ConnectionStrings\_D.config.sample" />
-    <None Include="App_Config\MailSettings\A.config.sample" />
-    <None Include="App_Config\MailSettings\_O.config.sample" />
-    <None Include="App_Config\Variables\P-CMS.config.sample" />
-    <None Include="App_Config\Variables\P-Frontend.config.sample" />
-    <None Include="App_Config\Variables\_D.config.sample" />
-    <None Include="App_Config\WebDeploy\T-CMS.config.sample" />
+    <Content Include="App_Config\Include-conditional\Config\GlassCodeFirst.config.sample" />
+    <Content Include="App_Config\Include-conditional\ConnectionStrings\A.config.sample" />
+    <Content Include="App_Config\Include-conditional\ConnectionStrings\P-CMS.config.sample" />
+    <Content Include="App_Config\Include-conditional\ConnectionStrings\P-Frontend.config.sample" />
+    <Content Include="App_Config\Include-conditional\ConnectionStrings\_D.config.sample" />
+    <Content Include="App_Config\Include-conditional\MailSettings\A.config.sample" />
+    <Content Include="App_Config\Include-conditional\MailSettings\_O.config.sample" />
+    <Content Include="App_Config\Include-conditional\Variables\P-CMS.config.sample" />
+    <Content Include="App_Config\Include-conditional\Variables\P-Frontend.config.sample" />
+    <Content Include="App_Config\Include-conditional\Variables\_D.config.sample" />
+    <Content Include="App_Config\Include-conditional\WebDeploy\T-CMS.config.sample" />
+    <Content Include="web.config.install.xdt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Efocus.Sitecore.ConditionalConfig.nuspec" />
+    <Content Include="web.config.uninstall.xdt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

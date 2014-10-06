@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<connectionStrings condition-machineName="PRODFRONT" rootPath="c:\web\front>
+<connectionStrings condition-machineName="PRODFRONT" condition-rootPath="web\\cms">
   <connectionString name="core" value="user id=sa;password=;Data Source=myserver;Database=Sitecore.Core_P" />
   <connectionString name="master" value="user id=sa;password=;Data Source=myserver;Database=Sitecore.Master_P" />
   <connectionString name="web" value="user id=sa;password=;Data Source=myserver;Database=Sitecore.Web_P" />

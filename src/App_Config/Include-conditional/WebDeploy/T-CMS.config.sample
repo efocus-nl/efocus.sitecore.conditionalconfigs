@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<configuration condition-machineName="WIN-QJICQ0VQL2R" condition-rootPath="TM1_CM">
+<configuration condition-machineName="WIN-MACHINE" condition-rootPath="some|other">
   <sitecore>
     <!-- Read the Sitecore Scaling guide (http://sdn.sitecore.net/Reference/Sitecore%206/Scaling%20Guide.aspx) 
          in its entirety before you configure Web Deploy.
