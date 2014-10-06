@@ -1,5 +1,4 @@
 Sitecore Conditional configs: deploy just 1 package
-Posted October 6th, 2014 by Chris van de Steeg. 0 Comments
 
 When deploying Sitecore to your DTAP environment, you will always need a separate set of configuration files per environment.
 One solution to accomplish is this, is to use web.config transforms with slowcheetah.
