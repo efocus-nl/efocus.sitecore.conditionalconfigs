@@ -4,13 +4,17 @@
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>$author$,Chris van de Steeg</authors>
-    <owners>$author$</owners>
+    <authors>Chris van de Steeg</authors>
+    <owners>eFocus, Chris van de Steeg</owners>
     <projectUrl>https://github.com/efocus-nl/efocus.sitecore.conditionalconfigs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Sitecore Conditional configs allow you to create separate configs per environment, but allows you to specify which environment this applies to.</description>
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Sitecore,Configs,slowcheatah</tags>
+    <dependencies>
+      <dependency id="WebActivatorEx" version="2.0.6" />
+      <dependency id="Microsoft.Web.Infrastructure" version="1.0.0" />
+    </dependencies>
   </metadata>
 </package>

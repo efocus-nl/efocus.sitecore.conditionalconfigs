@@ -11,6 +11,7 @@ Now you can create a deploy package for you entire sitecore folder, including al
 
 The patch system works exactly like you are used to from the sitecore include configs.
 You just have to place them in a separate folder named include-conditional.
+From version 2.0, you can also place the condition-* attributes on the config files inside sitecore's config folder!
 
 Also, we have built in 2 extra config options: files having the name of the rootnode set to “connectionStrings”, will patch your web.config’s connectionstring section
 and files with rootnode “mailSettings” will patch your mailsettings section of the web.config.
