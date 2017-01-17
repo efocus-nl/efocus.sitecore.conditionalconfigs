@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Efocus.Sitecore.ConditionalConfig</RootNamespace>
     <AssemblyName>Efocus.Sitecore.ConditionalConfig</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\..\</SolutionDir>
     <MSBuildTargetsDir Condition=" '$(MSBuildTargetsDir)' == '' ">$(SolutionDir)\scripts\build\</MSBuildTargetsDir>
@@ -45,11 +45,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>$(ModulesLibraryDir)\Sitecore\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\Libs\Sitecore\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -60,20 +60,25 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WebActivatorEx">
-      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigPatcher.cs" />
     <Compile Include="ConfigReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App_Config\Exclude\CD.config.sample" />
     <None Include="App_Config\Include-conditional\Config\GlassCodeFirst.config.sample" />
     <None Include="App_Config\Include-conditional\ConnectionStrings\A.config.sample" />
     <None Include="App_Config\Include-conditional\ConnectionStrings\P-CMS.config.sample" />
     <None Include="App_Config\Include-conditional\ConnectionStrings\P-Frontend.config.sample" />
-    <None Include="App_Config\Include-conditional\ConnectionStrings\_D.config.sample" />
+    <None Include="App_Config\Include-conditional\ConnectionStrings\_D.config.sample">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App_Config\Include-conditional\MailSettings\A.config.sample" />
     <None Include="App_Config\Include-conditional\MailSettings\_O.config.sample" />
     <None Include="App_Config\Include-conditional\Variables\P-CMS.config.sample" />

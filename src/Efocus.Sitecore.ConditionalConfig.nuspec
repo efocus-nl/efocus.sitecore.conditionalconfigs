@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/efocus-nl/efocus.sitecore.conditionalconfigs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Sitecore Conditional configs allow you to create separate configs per environment, but allows you to specify which environment this applies to.</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Version 3 is for sitecore 8.2 or newer only. For previous versions of Sitecore use Conditional configs 2.x</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Sitecore,Configs,slowcheatah</tags>
     <dependencies>

@@ -1,2 +1,6 @@
 src/bin/
 src/obj/
+
+_ReSharper**
+.vs/
+*.nupkg
